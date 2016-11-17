@@ -1,0 +1,10 @@
+{% extends "main.html" %}
+{% block content %}
+    <h2> Recipes </h2>
+    {% for recipe in recipes %}
+            <br><img src = {{recipe.recipePicture}}>
+            <a href = "{{url_for('showRecipeCard', recipe_id = recipe.id)}}"> <p>{{recipe.name}}</p></a>
+            <hr>
+            
+    {% endfor %}
+{% endblock %}
